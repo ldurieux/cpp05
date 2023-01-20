@@ -8,12 +8,16 @@ class Bureaucrat
 {
 public:
 	Bureaucrat(const std::string& name, int grade);
+	Bureaucrat(const Bureaucrat& other);
+	~Bureaucrat();
 
 	void increment();
 	void decrement();
 
 	const std::string& name() const;
 	int grade() const;
+
+	Bureaucrat& operator=(const Bureaucrat& other);
 
 	class GradeTooHighException : public std::exception
 	{

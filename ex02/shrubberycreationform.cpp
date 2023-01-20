@@ -7,6 +7,13 @@ ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target) :
 
 }
 
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other) :
+	Form(other),
+	_target(other._target)
+{
+
+}
+
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 
@@ -40,4 +47,11 @@ void ShrubberyCreationForm::execute(const Bureaucrat &bureaucrat) const
 	out << "             |||" << std::endl;
 	out << "             |||" << std::endl;
 	out << "       , -=-~  .-^- _" << std::endl;
+}
+
+ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other)
+{
+	Form::operator=(other);
+	_target = other._target;
+	return *this;
 }
