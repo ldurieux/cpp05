@@ -7,6 +7,8 @@ CPPSRCS		= \
 			  bureaucrat.cpp \
 			  form.cpp \
 			  shrubberycreationform.cpp \
+			  robotomyrequestform.cpp \
+			  presidentialpardonform.cpp \
 
 ASMSRCS		= \
 
